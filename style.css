@@ -1,0 +1,617 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    color: #405c49;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(120deg, #f8c6d8, #d9f0d9);
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    color: #38734d;
+    font-size: 40px;
+}
+
+header p {
+    color: #8b4965;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #43845b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #f2b6cb;
+    color: #315c40;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e1f2e3;
+    min-width: 210px;
+    box-shadow: 0 5px 12px #00000025;
+}
+
+.dropdown-content a {
+    color: #376a49;
+    padding: 12px 15px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* HOME */
+.hero {
+    min-height: 430px;
+    background:
+        linear-gradient(#163e2b66, #163e2b66),
+        url("https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=1600")
+        center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero-content {
+    max-width: 700px;
+    background-color: #fff0f5e8;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.hero h2 {
+    color: #39734c;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    margin-bottom: 22px;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: #43845b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+}
+
+.main-button:hover {
+    background-color: #e98eae;
+}
+
+/* GENERAL SECTIONS */
+.section {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #43845b;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section > p {
+    margin-bottom: 25px;
+}
+
+/* CONTENT CARDS */
+.content-card {
+    background-color: white;
+    border: 2px solid #f2b6cb;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 850px;
+    box-shadow: 0 4px 12px #00000010;
+}
+
+.content-card h3 {
+    color: #d66b91;
+    margin-bottom: 15px;
+}
+
+/* ORGANIZATIONAL CHART */
+.org-chart {
+    padding: 15px;
+}
+
+.org-box {
+    background-color: #e1f2e3;
+    border: 2px solid #78a986;
+    border-radius: 10px;
+    padding: 15px;
+    display: inline-block;
+    min-width: 145px;
+    margin: 5px;
+    color: #376a49;
+    font-weight: bold;
+}
+
+.org-line {
+    height: 25px;
+    width: 2px;
+    background-color: #78a986;
+    margin: auto;
+}
+
+.org-children {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f2b6cb;
+}
+
+.profile h4 {
+    color: #43845b;
+    margin-bottom: 10px;
+}
+
+.small-note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* ANIMAL GALLERY */
+.animals {
+    background-color: #e8f5e9;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.animal-card {
+    background-color: white;
+    border-radius: 18px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 12px #00000015;
+    transition: transform 0.3s;
+}
+
+.animal-card:hover {
+    transform: translateY(-7px);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.animal-card h3 {
+    color: #d66b91;
+    margin: 12px;
+}
+
+.animal-card p {
+    padding: 0 15px;
+}
+
+/* PORTFOLIO */
+#portfolio {
+    background-color: #fff0f5;
+}
+
+.portfolio-card {
+    background-color: white;
+    border: 2px solid #f2b6cb;
+    border-radius: 18px;
+    padding: 28px;
+    margin: 25px auto;
+    max-width: 700px;
+    box-shadow: 0 4px 12px #00000010;
+}
+
+.portfolio-card h3 {
+    color: #d66b91;
+    margin-bottom: 10px;
+}
+
+.portfolio-card input {
+    display: block;
+    margin: 18px auto;
+    max-width: 100%;
+}
+
+.upload-button {
+    background-color: #43845b;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.upload-button:hover {
+    background-color: #e98eae;
+    color: white;
+}
+
+/* UPLOADED FILES */
+.file-list {
+    margin-top: 20px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.file-item {
+    background-color: #e8f5e9;
+    border-left: 5px solid #43845b;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+.file-item a {
+    color: #376a49;
+    font-weight: bold;
+}
+
+/* SERVICES */
+.services {
+    background-color: #e8f5e9;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.service-card {
+    background-color: white;
+    border: 2px solid #f2b6cb;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.service-card h3 {
+    color: #d66b91;
+    margin-bottom: 10px;
+}
+
+/* CONTACTS */
+.contact-card {
+    background-color: white;
+    border: 2px solid #f2b6cb;
+    border-radius: 18px;
+    padding: 30px;
+    max-width: 650px;
+    margin: 25px auto;
+    text-align: left;
+}
+
+.contact-card label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #43845b;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #d8a5b8;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-card textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-details {
+    border-top: 1px solid #f2b6cb;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.contact-details h3 {
+    color: #d66b91;
+}
+
+/* FOOTER */
+footer {
+    background-color: #43845b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer h3 {
+    color: #ffe0eb;
+    margin-bottom: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        position: relative;
+    }
+
+    nav > a,
+    .dropdown > a {
+        text-align: center;
+        width: 100%;
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 22px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+}
+
+/* CENTER ACTIVITIES AND EXERCISES */
+#activities,
+#exercises {
+    width: 85%;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* CENTER PROJECT CONTENT */
+.project-card {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* CENTER BUTTONS */
+.project-card a,
+.project-card button {
+    margin: 8px;
+}
+
+/* CENTER PREVIOUS AND NEXT */
+.page-buttons {
+    justify-content: center;
+    gap: 25px;
+}
+
+/* CENTER HEADINGS */
+.portfolio-card h3 {
+    text-align: center;
+}
+
+/* MOBILE SIZE */
+@media (max-width: 600px) {
+    #activities,
+    #exercises {
+        width: 95%;
+        padding: 18px;
+    }
+
+    .page-buttons {
+        gap: 8px;
+    }
+}
+/* ACTIVITIES AND EXERCISES DESIGN */
+
+.activities-title {
+    color: #294936;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.activity-container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.activity-card {
+    background: #fffaf8;
+    border: 2px solid #e0dfd4;
+    border-left: 12px solid #71916b;
+    border-radius: 30px;
+    padding: 40px;
+    min-height: 310px;
+    box-shadow: 0 5px 20px rgba(50,80,50,0.08);
+    text-align: left;
+}
+
+.activity-card h2 {
+    color: #294936;
+    font-size: 32px;
+    margin: 0 0 100px;
+}
+
+.activity-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.activity-buttons a {
+    display: inline-block;
+    background: #e2a9bd;
+    color: #294936;
+    text-decoration: none;
+    padding: 20px 35px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.activity-buttons a:hover {
+    background: #d78eaa;
+}
+
+.activity-card details {
+    color: #71916b;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.activity-card summary {
+    cursor: pointer;
+}
+
+.activity-card details p {
+    color: #294936;
+    font-size: 16px;
+}
+
+.activity-container .page-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    gap: 10px;
+}
+
+.activity-container .page-buttons button {
+    background: #e2a9bd;
+    color: #294936;
+    border: none;
+    padding: 20px 35px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.activity-container .page-buttons button:hover {
+    background: #d78eaa;
+}
+
+.activity-container .page-buttons button:disabled {
+    background: #ead9b6;
+    color: #b4b5a5;
+    cursor: not-allowed;
+}
+
+#page-number,
+#exercise-page {
+    color: #294936;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .activity-card {
+        padding: 25px;
+        min-height: 280px;
+    }
+
+    .activity-card h2 {
+        font-size: 25px;
+        margin-bottom: 70px;
+    }
+
+    .activity-buttons a {
+        padding: 15px 22px;
+        font-size: 16px;
+    }
+
+    .activity-container .page-buttons button {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    #page-number,
+    #exercise-page {
+        font-size: 20px;
+    }
+}
+
